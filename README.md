@@ -58,7 +58,7 @@ The BME280 device 7-bit address is `0x76`. The I2C address is used by the code t
 To connect the LabVIEW project to the Raspberry Pi, change the IP Address of the "Raspberry Pi" target, in the project, according to your need.
 
 The VI routine named `RPi_I2C_BME280_read_example.vi` contains an example of the reading procedure of the BME280 sensor through the I2C bus.<br>
-The procedure consists in the following steps:
+The procedure performs the following steps:
 
 0. Opens the I2C channel. The Raspberry Pi I2C channel is set to `1` and the 7-bit device address is set to `0x76`
 1. Reads the BME280 Calibration Coefficients. First reads the Calibration Registers, than converts the Registers to Raw Calibration Coefficients.
