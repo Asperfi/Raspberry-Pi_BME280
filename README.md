@@ -67,7 +67,7 @@ The procedure consists in the following steps:
 4. Close the I2C channel.
 
 <p align="center">The RPi_I2C_BME280_read_example.vi block diagram</p>
-<p align="center"><img src="Documents/RPi_I2C_BME280_read_example.png"></img></p>
+<p align="center"><img src="Documents/RPi_i2c_BME280_read_Example.png"></img></p>
 
 ## Requirements
 ### Hardware
