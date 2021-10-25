@@ -76,7 +76,7 @@ The procedure consists in the following steps:
 
 ### Development environment
 - Nationa Intruments LabVIEW 2020 SP1
-- NI LabVIEW LINX Toolkit 1.0.0.9
+- [NI LabVIEW LINX Toolkit 1.0.0.9](https://www.vipm.io/package/ni_labview_linx_toolkit/)
 
 ## License
 This project is licensed under MIT. <br>
