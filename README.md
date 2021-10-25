@@ -64,7 +64,7 @@ The procedure consists in the following steps:
 1. Reads the BME280 Calibration Coefficients. First reads the Calibration Registers, than converts the Registers to Raw Calibration Coefficients.
 2. Initializes the BME280 device for operation in 'Normal mode'. The normal mode is a perpetual cycling of measurements and inactive periods.
 3. Cyclically reads the data registers from the BME280 device and converts them in calibrated Pressure, Temperature and Humidity measures.
-4. Close the I2C channel.
+4. Closes the I2C channel.
 
 <p align="center">The RPi_I2C_BME280_read_example.vi block diagram</p>
 <p align="center"><img src="Documents/RPi_i2c_BME280_read_Example.png"></img></p>
