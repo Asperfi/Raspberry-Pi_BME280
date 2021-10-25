@@ -1,6 +1,7 @@
 # BME280 LabVIEW code for Raspberry Pi
 
-This repository contains a LabVIEW reading procedure of the Bosch BME280 sensor through the Raspberry Pi. The Bosch BME280 ([pdf data sheet](Documents/bst-bme280-ds002.pdf)) is a digital temperature, pressure and humidity sensor. This LabVIEW project implements a code, for Raspberry Pi 4, that periodically read the BME280 sensor and display the calibrated measures. The sensor reading is performed via I2C bus interface.
+This project contains a LabVIEW reading procedure of the Bosch BME280 sensor through the Raspberry Pi.<br>
+The Bosch BME280 ([pdf data sheet](Documents/bst-bme280-ds002.pdf)) is a digital temperature, pressure and humidity sensor. This LabVIEW project implements a code, for Raspberry Pi 4, that periodically read the BME280 sensor and display the calibrated measures. The sensor reading is performed via I2C bus interface.
 
 ## Wiring
 
@@ -15,6 +16,9 @@ The following table shows the pins correspondence between the BME280 sensor and 
 | SDA | Pin 3 - GPIO 2 (I2C Data) |
 
 The Raspberry Pi pinout description can be found at https://pinout.xyz/.
+
+<p align="center">BME280 - Raspberry Pi pinout</p>
+<p align="center"><img src="Documents/BME280_Pinout.png" width="350"></img></p>
 
 ## Raspberry Pi setup
 
@@ -55,11 +59,15 @@ To connect the LabVIEW project to the Raspberry Pi, change the IP Address of the
 
 The VI routine named `RPi_I2C_BME280_read_example.vi` contains an example of the reading procedure of the BME280 sensor through the I2C bus.<br>
 The procedure consists in the following steps:
+
 0. Opens the I2C channel. The Raspberry Pi I2C channel is set to `1` and the 7-bit device address is set to `0x76`
 1. Reads the BME280 Calibration Coefficients. First reads the Calibration Registers, than converts the Registers to Raw Calibration Coefficients.
 2. Initializes the BME280 device for operation in 'Normal mode'. The normal mode is a perpetual cycling of measurements and inactive periods.
 3. Cyclically reads the data registers from the BME280 device and converts them in calibrated Pressure, Temperature and Humidity measures.
 4. Close the I2C channel.
+
+<p align="center">The RPi_I2C_BME280_read_example.vi block diagram</p>
+<p align="center"><img src="Documents/RPi_I2C_BME280_read_example.png"></img></p>
 
 ## Requirements
 ### Hardware
@@ -69,3 +77,7 @@ The procedure consists in the following steps:
 ### Development environment
 - Nationa Intruments LabVIEW 2020 SP1
 - NI LabVIEW LINX Toolkit 1.0.0.9
+
+## License
+This project is licensed under MIT. <br>
+Please see the [LICENSE](LICENSE) file for details.
