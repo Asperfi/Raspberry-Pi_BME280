@@ -25,7 +25,7 @@ The Raspberry Pi pinout description can be found at https://pinout.xyz/.
 ### How to enable I2C bus on RPi device
 Use the raspi-config utility to activate i2c-bus on the OS level.<br>
 Use the `sudo raspi-config` command to open the utility, and navigate to the "Interfaceing Options" menu to enable automatic loading of I2C kernel module. Probably you will need to reboot to load the I2C kernel module.<br>
-Finally you should have device like /dev/i2c-1 present in the system:
+Finally you should have a device like /dev/i2c-1 present in the system:
 ```
 $ ls -l /dev/i2c-1
 crw-rw---- 1 root i2c 89, 1 Aug 26 17:17 /dev/i2c-1
